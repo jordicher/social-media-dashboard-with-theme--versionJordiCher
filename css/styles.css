@@ -1,0 +1,314 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bgColor: hsl(0, 0%, 100%);
+    --bgHeader: hsl(225, 100%, 98%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --bgCartText: hsl(227, 47%, 96%);
+    --especialText: hsl(228, 12%, 44%);
+    --normalText: hsl(230, 17%, 14%);
+    --toggleSwitchStart: rgb(160, 154, 154);
+    --toogleSwitchEnd: rgb(174, 179, 203);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bgColor: hsl(230, 17%, 14%);
+    --bgHeader: hsl(232, 19%, 15%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --bgCartText: hsl(228, 28%, 20%);
+    --especialText: hsl(228, 34%, 66%);
+    --normalText: hsl(0, 0%, 100%);
+    --toggleSwitchStart: rgb(55, 143, 230);
+    --toogleSwitchEnd: rgb(62, 218, 130);
+  }
+}
+
+:root {
+  --LimeGreen: hsl(163, 72%, 41%);
+  --BrightRed: hsl(356, 69%, 56%);
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: rgb(223, 73, 150);
+  --YouTube: hsl(348, 97%, 39%);
+}
+
+body {
+  margin: auto;
+  width: 1440px;
+  background-color: var(--bgColor);
+}
+
+header div.container {
+  margin-top: 25px;
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+header div.container p {
+  color: var(--especialText);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+header div.container div {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--especialText);
+}
+
+.drkMode {
+  padding: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+header div.container hr {
+  display: none;
+}
+
+div.container {
+  margin-top: 25px;
+  display: flex;
+  color: var(--normalText);
+}
+
+.container > .bigArticle,
+.smallArticle {
+  flex: 1;
+  margin: 0px 20px;
+}
+
+.bigArticle:first-child,
+.smallArticle:first-child {
+  margin-left: 0px;
+}
+
+.bigArticle:last-child,
+.smallArticle:last-child {
+  margin-right: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  header div.container div {
+    position: static;
+    padding-bottom: 30px;
+  }
+
+  .drkMode {
+    padding: 0px;
+  }
+
+  .switch {
+    float: right;
+  }
+
+  header div.container hr {
+    margin: 20px 0px;
+    display: block;
+    background-color: var(--especialText);
+    border: 0;
+    height: 1px;
+  }
+
+  body {
+    width: 350px;
+  }
+
+  div.container {
+    display: inline;
+  }
+
+  .container > .bigArticle,
+  .smallArticle {
+    margin: 20px 0px;
+  }
+
+  .bigArticle:first-child,
+  .smallArticle:first-child {
+    margin: 0px;
+  }
+
+  .bigArticle:last-child,
+  .smallArticle:last-child {
+    margin: 0px;
+  }
+}
+
+.bigArticle {
+  border-top: 3px solid var(--Facebook);
+  background-color: var(--bgCartText);
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.instagram {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, yellow, var(--Instagram));
+  border-image-slice: 1;
+}
+
+.youtube {
+  border-color: var(--YouTube);
+}
+
+.bigArticle > p {
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+.titleArticle img {
+  margin-right: 5px;
+}
+
+.titleArticle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--especialText);
+}
+
+.numFollowers {
+  font-weight: 700;
+  font-size: 50px;
+}
+.followers {
+  display: block;
+  text-transform: uppercase;
+  color: var(--especialText);
+  letter-spacing: 5px;
+  font-size: 10px;
+}
+
+.todayArticle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--LimeGreen);
+  font-size: small;
+  font-weight: bold;
+}
+
+.todayArticle img {
+  margin-right: 5px;
+}
+
+.down {
+  color: var(--BrightRed);
+}
+
+h3.subTitle {
+  color: var(--especialText);
+  margin: 40px 0px 20px;
+}
+
+.smallArticle {
+  background-color: var(--bgCartText);
+  height: 130px;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.smallArticle p {
+  font-weight: bold;
+}
+
+.titleSmallArticle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.imgSmallArticle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.numSmall {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 35px;
+}
+
+.smallArticle .todayArticle {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  justify-content: right;
+}
+
+.smallArticle > * {
+  padding: 20px;
+}
+
+/* slider  w3schools*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to right,
+    var(--toggleSwitchStart),
+    var(--toogleSwitchEnd)
+  );
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--bgHeader);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
